@@ -7,7 +7,8 @@ import { Cocktail } from 'src/app/shared/interfaces/cocktail.interface';
   styleUrls: ['./cocktail-list.component.scss'],
 })
 export class CocktailListComponent {
-  @Input() cocktails: Cocktail[] = [];
+  @Input() public cocktails: Cocktail[] = [];
+  @Input() public selectedCocktail!: Cocktail;
 
   @Output()
   private changedCocktail: EventEmitter<number> = new EventEmitter();
